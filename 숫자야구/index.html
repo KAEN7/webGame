@@ -7,8 +7,11 @@
     <title>숫자야구</title>
 </head>
 <body>
-    <input class='inputJs' type="number" />
-    <button>SHOT!</button>
+    <h1 class="resultJs"></h1>
+    <form>
+        <input class='inputJs' type="number" maxlength="4" oninput="maxLengthCheck(this)" />
+        <button class="inputBtn">SHOT!</button>
+    </form>
 
     <script src="app.js"></script>
 </body>
