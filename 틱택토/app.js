@@ -4,38 +4,48 @@
 const td = document.querySelectorAll('td');
 const winLose = document.querySelector('h3');
 
-let turn = 'X';
+// LET
+let turn = 'O';
 
+// FUNCTION
 function clkTd(event) {
-    const tdId = event.target.id;
-    console.log(tdId);
-    // 턴 체크
-    if(event.target.innerText = ' ') {
-        event.target.innerText = turn;
-        if(turn === 'O') {
-            turn = 'X';
-        } else if(turn = 'X') {
-            turn = 'O';
-        }
-    }
+    const tdId = event.target.innerText;
+    
     // 줄 체크
     let winnerCheck = false;
-    console.log(td[0].innerText, td[4].innerText, td[8].innerText);
+
     if(
         td[0].innerText === turn && 
         td[4].innerText === turn && 
         td[8].innerText === turn
-        ) {
-        console.log('동작되면안됨');
+    ) {
+        winnerCheck = true;
+    }
+    if(
+        td[2].innerText === turn && 
+        td[4].innerText === turn && 
+        td[6].innerText === turn
+    ) {
+        console.log('동작되야됨');
         winnerCheck = true;
     }
     
     if(winnerCheck === true) {
         winLose.innerText = 'WIN!!!'
     }
+
+    // 턴 체크
+    if(tdId === '') {
+        event.target.innerText = turn;
+        if(turn === 'O') {
+            turn = 'X';
+        } else {
+            turn = 'O';
+        }
+    }
 }
 
-
+// FOR
 for(i=0; i<9; i++) {
     td[i].addEventListener('click', clkTd);
 }
