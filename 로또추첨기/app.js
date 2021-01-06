@@ -1,4 +1,5 @@
 const resultBar = document.querySelector('.resultBar');
+const bonusBar = document.querySelector('.bonusBar');
 
 // 숫자 생성
 let numbers = [];
@@ -30,5 +31,6 @@ for(i=0; i<lotto.length; i++) {
     newDiv.innerText = lotto[i];
     newDiv.classList = lotto[i];
     resultBar.append(newDiv);
-
 }
+
+bonusBar.innerText = shuffle[shuffle.length - 1];

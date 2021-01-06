@@ -1,0 +1,47 @@
+// MIXIN
+@mixin base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin bigGroup {
+    @include base;
+    background: rgb(230, 230, 230);
+    width: 70%;
+    height: 290px
+}
+
+// BODY
+body {
+    @include base;
+    background: black;
+    color: black;
+}
+
+// MAIN
+main {
+    @include bigGroup;
+    margin-top: 70px;
+    border-radius: 10px 10px 0 0;
+    .resultBar {
+        display: flex;
+        div {
+            margin-right: 3px;
+            border-radius: 50%;
+        }
+        .1 .2 .3 .4 {
+            background: red;
+        }
+    }
+}
+
+// SECTION
+section {
+    @include bigGroup;
+    border-radius: 0 0 10px 10px;
+    .bonusBar {
+        display: flex;
+    }
+}

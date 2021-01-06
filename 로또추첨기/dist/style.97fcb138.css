@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+  color: black; }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #e6e6e6;
+  width: 70%;
+  height: 290px;
+  margin-top: 70px;
+  border-radius: 10px 10px 0 0; }
+  main .resultBar {
+    display: flex; }
+    main .resultBar div {
+      margin-right: 3px;
+      border-radius: 50%; }
+    main .resultBar .1 .2 .3 .4 {
+      background: red; }
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #e6e6e6;
+  width: 70%;
+  height: 290px;
+  border-radius: 0 0 10px 10px; }
+  section .bonusBar {
+    display: flex; }
+
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
