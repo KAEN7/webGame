@@ -29,9 +29,10 @@ main {
         display: flex;
         div {
             margin-right: 3px;
+            border: 1px solid black;
             border-radius: 50%;
         }
-        .1 .2 .3 .4 {
+        .1 .2 .3 .4 .5 .6 .7 .8 .9 .10{
             background: red;
         }
     }
@@ -45,3 +46,5 @@ section {
         display: flex;
     }
 }
+
+// red, orange, yellow, blue, green
