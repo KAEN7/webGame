@@ -12,6 +12,7 @@ let inertvalJS = setInterval(() => {
         hand.innerText = '가위';
     }
 }, 10);
+inertvalJS;
 
 
 // 정답 찾기
@@ -34,3 +35,8 @@ document.querySelectorAll('.btn').forEach(function(btn) {
 // setInterval, clearTimeout, setTimeout
 // Object.entries(객체) 를 사용하면 객체를 배열로
 // find 배열안에 인덱스(몇번째인지)를 찾음, findIndex 인덱스 값을 찾음
+
+// 가위 < 바위, 가위 > 보
+// 바위 < 보, 바위 > 가위
+// 보 < 가위, 보 > 바위
+// 가위: 1 바위: 0 보: -1
