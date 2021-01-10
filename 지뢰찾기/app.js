@@ -3,17 +3,18 @@ document.querySelector('#exec').addEventListener('click', function() {
     let ver = parseInt(document.querySelector('#ver').value);
     let mine = parseInt(document.querySelector('#mine').value);
     console.log(hor, ver, mine);
+
+    // 지뢰 뽑기
     let ready = Array(hor * ver)
         .fill()
         .map(function(current, index) {
             return index + 1;
         });
     let shuflle = [];
-    while(ready.length > 0) {
+    while(ready.length > 80) {
         let moveValue = ready.splice(Math.floor(Math.random() * ready.length), 1)[0];
         shuflle.push(moveValue);
     }
-
 
     let dataset = []; // 지뢰찾기판
     let tbody = document.querySelector('#table tbody');
@@ -29,5 +30,11 @@ document.querySelector('#exec').addEventListener('click', function() {
         }
         tbody.appendChild(tr);
     }
-    console.log(dataset);
+    // 지뢰 심기
+    for(let k=0; k<shuflle.length; k++) { // ex 59
+        let height = Math.floor(shuflle[k] / 10); // ex 5
+        let width = Math.floor(shuflle[k] % 10 - 1); // ex 9 > 8
+        console.log(height, width);
+        tbody.children[height].children[width] = 'X';
+    }
 });
